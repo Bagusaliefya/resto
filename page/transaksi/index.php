@@ -42,7 +42,9 @@ if (isset($_POST['hapus'])) {
                             <th>ID Meja</th>
                             <th>Status</th>
                             <th>Nama Pelayan</th>
-                            <th>List Menu</th>
+                            <?php if ($_SESSION['level'] == "Kasir") : ?>
+                                <th>List Menu</th>
+                            <?php endif ?>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -66,7 +68,9 @@ if (isset($_POST['hapus'])) {
                                     <?php endif ?>
                                 </td>
                                 <td><?php echo $dt['nama'] ?></td>
-                                <td><a href="index.php?halaman=transaksi-pemesanan/list-menu&keyword=<?php echo $dt['no_transaksi'] ?>" class="btn btn-sm btn-primary form-control rounded-pill"><i class="dripicons dripicons-weight"></i></a></td>
+                                <?php if ($_SESSION['level'] == "Kasir") : ?>
+                                    <td><a href="index.php?halaman=transaksi-pemesanan/list-menu&keyword=<?php echo $dt['no_transaksi'] ?>" class="btn btn-sm btn-primary form-control rounded-pill"><i class="dripicons dripicons-weight"></i></a></td>
+                                <?php endif ?>
                                 <td align="center">
                                     <form method="post">
                                         <a href="" data-bs-toggle="modal" data-bs-target="#ubah<?php echo $dt['no_transaksi'] ?>" class="btn btn-sm rounded-pill btn-success">
