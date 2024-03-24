@@ -3,22 +3,22 @@ $data = mysqli_query($koneksi, "SELECT * FROM tbl_transaksi INNER JOIN tbl_user 
 
 if (isset($_POST['tambah'])) {
     if (addtransaksi($_POST) > 0) {
-        $addtransaksi = true;
+        $addorder = true;
     } else {
-        $addtransaksi = true;
+        $addorder = true;
     }
 }
 if (isset($_POST['ubah'])) {
     if (uptransaksi($_POST) > 0) {
-        $uptransaksi = true;
+        $uporder = true;
     } else {
-        $uptransaksi = true;
+        $uporder = true;
     }
 }
 if (isset($_POST['hapus'])) {
     $query = mysqli_query($koneksi, "DELETE FROM tbl_transaksi WHERE no_transaksi='$_POST[no_transaksi]'");
     if ($query) {
-        $deltransaksi = true;
+        $delorder = true;
     }
 }
 ?>
@@ -58,9 +58,9 @@ if (isset($_POST['hapus'])) {
                                 </td>
                                 <td>
                                     <?php if ($dt['bayar'] == NULL) : ?>
-                                        <span class="badge bg-danger">Menunggu Pembayaran</span>
+                                        <span class="badge bg-danger">Belum di Bayar</span>
                                     <?php else : ?>
-                                        <span class="badge bg-success">Siap Di Antar</span>
+                                        <span class="badge bg-success">Sudah di Bayar</span>
                                     <?php endif ?>
                                 </td>
                                 <td><?php echo $dt['nama'] ?></td>

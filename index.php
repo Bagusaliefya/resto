@@ -108,7 +108,7 @@ if (isset($_POST['login'])) {
             confirmButtonText: 'OK'
         }).then((result) => {
             if (result.value) {
-                window.location = 'page/index.php?halaman=data-user';
+                window.location = 'page/index.php?halaman=dashboard';
             }
         })
     </script>
@@ -123,7 +123,7 @@ if (isset($_POST['login'])) {
             confirmButtonText: 'OK'
         }).then((result) => {
             if (result.value) {
-                window.location = 'page/index.php?halaman=laporan/transaksi';
+                window.location = 'page/index.php?halaman=dashboard';
             }
         })
     </script>
@@ -137,7 +137,7 @@ if (isset($_POST['login'])) {
             confirmButtonText: 'OK'
         }).then((result) => {
             if (result.value) {
-                window.location = 'page/index.php?halaman=transaksi-pemesanan';
+                window.location = 'page/index.php?halaman=dashboard';
             }
         })
     </script>
@@ -152,7 +152,7 @@ if (isset($_POST['login'])) {
             confirmButtonText: 'OK'
         }).then((result) => {
             if (result.value) {
-                window.location = 'page/index.php?halaman=order-order';
+                window.location = 'page/index.php?halaman=dashboard';
             }
         })
     </script>

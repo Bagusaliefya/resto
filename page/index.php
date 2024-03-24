@@ -63,7 +63,7 @@ require '../config/koneksi.php';
           <?php include 'transaksi/index.php'; ?>
         <?php endif ?>
         <?php if ($_GET['halaman'] == "order-order") : ?>
-          <?php include 'order/order.php'; ?>
+          <?php include 'order/index.php'; ?>
         <?php endif ?>
         <?php if ($_GET['halaman'] == "transaksi-pemesanan/list-menu") : ?>
           <?php include 'transaksi/menu.php'; ?>
